@@ -6,10 +6,19 @@
             "use": "@vercel/node"
         }
     ],
+
     "routes": [
         {
             "src": "/",
             "dest": "./app.js"
-        }
+        },
+        {"src":"/*",
+        "methods":[
+            "POST",
+            "GET",
+            "PUT",
+            "DELETE"
+        ],
+    "dest":"./app.js"}
     ]
 }
