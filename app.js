@@ -44,14 +44,14 @@ mongoose.connect(
 // };
 // const config = JSON.parse(process.env.APP_CONFIG);
 
-// app.get('/', (req, res, next) => {
-//     res
-//         .header("Access-Control-Allow-Origin", "*")
-//         .status(200)
-//         .set({ 'content-type': 'text/html; charset=utf-8' })
-//         .sendFile(clientPath + '/index.html');
+app.get('/', (req, res, next) => {
+    res
+        .header("Access-Control-Allow-Origin", "*")
+        .status(200)
+        .set({ 'content-type': 'text/html; charset=utf-8' })
+        .sendFile(clientPath + '/index.html');
 
-// });
+});
 // ---------------------POST Colors -----------------
 app.post('/api/colors', (req, res, next) => {
     const newUser = new Colors({
